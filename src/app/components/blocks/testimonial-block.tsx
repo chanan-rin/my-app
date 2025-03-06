@@ -25,8 +25,8 @@ export function TestimonialBlock({ block }: { block: TestimonialBlock }) {
         <div className="relative h-64 md:h-full col-span-1">
           <Image
             src={imageUrl}
-            alt={block.photo.alternativeText || block.authorName}
-            layout="fill"
+            alt={block.photo?.alternativeText || block.authorName || "Default alt text"}
+            layout="fill" 
             objectFit="cover"
             className="w-full h-full object-center"
           />
